@@ -1,4 +1,5 @@
 class ReviewsController < ApplicationController
+  before_action :set_institution
   before_action :set_review, only: [:show, :edit, :update, :destroy]
 
   # GET /reviews
@@ -12,7 +13,8 @@ class ReviewsController < ApplicationController
 
   # GET /reviews/new
   def new
-    @review = Review.new
+    @institution = Institution.find(params[:institution_id])
+    @review = Review.new(institution: @institution)
   end
 
   # GET /reviews/1/edit
@@ -24,7 +26,8 @@ class ReviewsController < ApplicationController
     @review = Review.new(review_params)
 
     if @review.save
-      redirect_to @review, notice: 'Review was successfully created.'
+      redirect_to institution_review_path(@institution, @review),
+                  notice: 'Review was successfully created.'
     else
       render :new
     end
@@ -46,13 +49,18 @@ class ReviewsController < ApplicationController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_review
-      @review = Review.find(params[:id])
-    end
 
-    # Only allow a trusted parameter "white list" through.
-    def review_params
-      params.require(:review).permit(:rating, :youth_friendly, :title, :body)
-    end
+  # Use callbacks to share common setup or constraints between actions.
+  def set_review
+    @review = Review.find(params[:id])
+  end
+
+  def set_institution
+    @institution = Institution.find(params[:institution_id])
+  end
+
+  # Only allow a trusted parameter "white list" through.
+  def review_params
+    params.require(:review).permit(:rating, :youth_friendly, :title, :body)
+  end
 end

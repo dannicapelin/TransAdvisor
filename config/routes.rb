@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
-  resources :institutions
-  resources :reviews
   root 'page#index'
+
+  resources :institutions do
+    resources :reviews
+  end
 end

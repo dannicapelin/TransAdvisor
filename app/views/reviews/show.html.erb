@@ -20,5 +20,5 @@
   <%= @review.body %>
 </p>
 
-<%= link_to 'Edit', edit_review_path(@review) %> |
-<%= link_to 'Back', reviews_path %>
+<%= link_to 'Edit', edit_institution_review_path(@institution, @review) %>
+<%= link_to 'Back', institution_reviews_path(@institution) %>

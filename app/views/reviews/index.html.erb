@@ -20,9 +20,9 @@
         <td><%= review.youth_friendly %></td>
         <td><%= review.title %></td>
         <td><%= review.body %></td>
-        <td><%= link_to 'Show', review %></td>
-        <td><%= link_to 'Edit', edit_review_path(review) %></td>
-        <td><%= link_to 'Destroy', review, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Show', institution_review_path(@institution, review) %></td>
+        <td><%= link_to 'Edit', edit_institution_review_path(@institution, review) %></td>
+        <td><%= link_to 'Destroy', [@institution, review], method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
@@ -30,4 +30,4 @@
 
 <br>
 
-<%= link_to 'New Review', new_review_path %>
+<%= link_to 'New Review', new_institution_review_path %>
