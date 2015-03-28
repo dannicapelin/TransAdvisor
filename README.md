@@ -16,7 +16,7 @@ We're going to get sued for this.
 ## Licence
 
 ```
-Copyright (C) 2015 Alex White et al
+Copyright © 2015 Alex White et al. All Rights Reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining
 a copy of this software and associated documentation files (the "Software"),
