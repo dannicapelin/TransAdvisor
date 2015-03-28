@@ -1,1 +1,57 @@
-Hello from Transadvisor (and rails)
+<!DOCTYPE html>
+<html>
+  <head>
+  <link href="http://s3.amazonaws.com/codecademy-content/courses/ltp/css/shift.css" rel="stylesheet">
+    <%= stylesheet_link_tag    'application', media: 'all' %>
+ <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+ <%= csrf_meta_tags %>
+ <link href='http://fonts.googleapis.com/css?family=Titillium+Web' rel='stylesheet' type='text/css'>
+  </head>
+
+
+  <body>
+    <center><img src="TransAdvisor_Logo.png" alt="TransAdvisor Logo" align="center" height="300" width="300"></center>
+    <div class="nav">
+      <div class="container">
+        <ul>
+          <li><a href="#"> About </a></li>
+          <li><a href="#">Guides</a></li>
+        </ul>
+        <ul>
+          <li><a href="#">Write Review</a></li>
+          <li><a href="#">Read Review</a></li>
+          <li><a href="#">Log In</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="jumbotron">
+      <div class="container">
+        <h1>Leave A Review Today.</h1>
+        <p>Reviews of health services for trans* people</p>
+      </div>
+    </div>
+
+    <div class="learn-more">
+	  <div>
+		<div>
+	  	  <div>
+			<h3>About</h3>
+			<p>TransAdvisor was created for trans people by a...</p>
+			<p><a href="#">Click here to learn more.</a></p>
+		  </div>
+		  <div>
+			<h3>Guide</h3>
+			<p>This is our guid of things to think about...</p>
+			<p><a href="#">Click here to read our guides.</a></p>
+		  </div>
+		  <div>
+			<h3>Reviews</h3>
+			<p>Leave your reviews and read reviews left by...</p>
+			<p><a href="#">Click here for reviews.</a></p>
+		  </div>
+	    </div>
+	  </div>
+	</div>
+  </body>
+</html>
