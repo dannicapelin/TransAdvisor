@@ -2,11 +2,6 @@ class ReviewsController < ApplicationController
   before_action :set_institution
   before_action :set_review, only: [:show, :edit, :update, :destroy]
 
-  # GET /reviews
-  def index
-    @reviews = Review.all
-  end
-
   # GET /reviews/1
   def show
   end
@@ -61,6 +56,10 @@ class ReviewsController < ApplicationController
 
   # Only allow a trusted parameter "white list" through.
   def review_params
-    params.require(:review).permit(:rating, :youth_friendly, :title, :body)
+    args = params.require(:review).permit(
+      :rating, :youth_friendly, :title, :body
+    )
+    args[:institution_id] = params.require(:institution_id)
+    args
   end
 end

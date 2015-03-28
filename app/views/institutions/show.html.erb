@@ -20,5 +20,35 @@
   <%= @institution.link %>
 </p>
 
+<p>
+  <%= link_to 'New Review', new_institution_review_path(@institution) %>
+</p>
+
 <%= link_to 'Edit', edit_institution_path(@institution) %> |
 <%= link_to 'Back', institutions_path %>
+
+<table>
+  <thead>
+    <tr>
+      <th>Rating</th>
+      <th>Youth friendly</th>
+      <th>Title</th>
+      <th>Body</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @institution.reviews.each do |review| %>
+      <tr>
+        <td><%= review.rating %></td>
+        <td><%= review.youth_friendly %></td>
+        <td><%= review.title %></td>
+        <td><%= review.body %></td>
+        <td><%= link_to 'Show', institution_review_path(@institution, review) %></td>
+        <td><%= link_to 'Edit', edit_institution_review_path(@institution, review) %></td>
+        <td><%= link_to 'Destroy', [@institution, review], method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
