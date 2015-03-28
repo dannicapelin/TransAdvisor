@@ -1,6 +1,17 @@
 # Transadvisor
 
+We're going to get sued for this.
+
 [Design Document](https://docs.google.com/document/d/1cMdHVjgeDRfpOBprpEvcb6KrfFjYQhB9HjbM5xPodYg/edit?usp=sharing)
+
+## Authors
+
+* [Alex](http://github.com/apocalexnow)
+* [Caroline](https://github.com/carolineclark)
+* Dani
+* [Louis](http://github.com/lpil)
+* [Tim](https://github.com/THJ113)
+* [Xavier](https://github.com/THJ113)
 
 ## Licence
 
