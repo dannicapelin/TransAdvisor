@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  rating: 
+  youth_friendly: false
+  title: MyString
+  body: 
+
+two:
+  rating: 
+  youth_friendly: false
+  title: MyString
+  body: 
