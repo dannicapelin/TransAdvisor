@@ -82,7 +82,7 @@ def grab_links(soup):
     for s in soup.find_all(class_="fctitle"):
         text = s.a["href"]
         text = text.encode('ascii', 'ignore')
-        webaddress = "http://www.nhs.uk/" + text
+        webaddress = "http://www.nhs.uk" + text
         data.append(webaddress)
 
     return data
