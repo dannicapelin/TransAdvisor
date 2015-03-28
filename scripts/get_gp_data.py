@@ -24,7 +24,7 @@ def create_gp_yaml():
     # First 65 results of GP addresses in WC1 N3AS.
     webaddress = (
         "http://www.nhs.uk/Service-Search/GP/wc1-n3as/Results/4/-0."
-        "121923021972179/51.5205688476563/4/0?ResultsOnPageValue=65&"
+        "121923021972179/51.5205688476563/4/0?ResultsOnPageValue=1000&"
         "isNational=0"
     )
 
@@ -49,16 +49,25 @@ def create_gp_yaml():
             "Something went wrong"
         )
 
+    telephone_index = len(address_names)
+
     for i in range(len(address_names)):
+
         gp_dict = {}
         gp_dict["address"] = address_names[i]
-        gp_dict["surgery"] = surgery_names[i]
+        gp_dict["name"] = surgery_names[i]
 
         # TODO: This is VERY BAD.  We should sort each surgery individually,
         # but instead I grabbed the list of all the surgery names, numbers and
         # addresses, and this one is missing a telephone number
         if not surgery_names[i] == "Portsoken Health Centre":
-            gp_dict["telephone"] = telephone_numbers[i]
+            if i > telephone_index:
+                gp_dict["telephone"] = telephone_numbers[i - 1]
+            else:
+                gp_dict["telephone"] = telephone_numbers[i]
+        else:
+            telephone_index = i
+
         gp_dict["link"] = links[i]
         gp_data.append(gp_dict)
 
@@ -80,7 +89,7 @@ def grab_links(soup):
 
 
 def write_yaml_to_file(yaml):
-    gp_path = os.path.join(os.path.expanduser('~'), 'gp_data')
+    gp_path = os.path.join(os.path.expanduser('~'), 'gp_data.yml')
     f = open(gp_path, 'w+')
     f.write(yaml)
     f.close()
