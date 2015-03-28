@@ -1,3 +1,5 @@
 class PageController < ApplicationController
-  render layout: false
+  def index
+    render layout: false
+  end
 end
