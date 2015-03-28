@@ -46,7 +46,7 @@
         <td><%= review.body %></td>
         <td><%= link_to 'Show', institution_review_path(@institution, review) %></td>
         <td><%= link_to 'Edit', edit_institution_review_path(@institution, review) %></td>
-        <td><%= link_to 'Destroy', [@institution, review], method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <%# <td><%= link_to 'Destroy', [@institution, review], method: :delete, data: { confirm: 'Are you sure?' } %1></td> %>
       </tr>
     <% end %>
   </tbody>

@@ -40,10 +40,10 @@ class InstitutionsController < ApplicationController
   end
 
   # DELETE /institutions/1
-  def destroy
-    @institution.destroy
-    redirect_to institutions_url, notice: 'Institution was successfully destroyed.'
-  end
+  # def destroy
+  #   @institution.destroy
+  #   redirect_to institutions_url, notice: 'Institution was successfully destroyed.'
+  # end
 
   private
     # Use callbacks to share common setup or constraints between actions.
