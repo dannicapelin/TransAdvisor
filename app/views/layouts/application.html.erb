@@ -8,18 +8,21 @@
   <link href='http://fonts.googleapis.com/css?family=Titillium+Web' rel='stylesheet' type='text/css'>
 </head>
 <body>
-<center><img src="<%= image_url("TransAdvisor_Logo.png") %>" alt="TransAdvisor Logo" align="center" height="300" width="300"></center>
+  <%= link_to '/' do %>
+    <center><img src="<%= image_url("TransAdvisor_Logo.png") %>" alt="TransAdvisor Logo" align="center" height="300" width="300"></center>
+  <% end %>
     <div class="nav">
       <div class="container">
         <ul>
           <li><a href="#"> About </a></li>
           <li><a href="#">Guides</a></li>
+          <li><%= link_to 'Institutions', institutions_path %></li>
         </ul>
-        <ul>
-          <li><a href="#">Write Review</a></li>
-          <li><a href="#">Read Review</a></li>
-          <li><a href="#">Log In</a></li>
-        </ul>
+        <%# <ul> %>
+        <%#   <li><a href="#">Write Review</a></li> %>
+        <%#   <li><a href="#">Read Review</a></li> %>
+        <%#   <li><a href="#">Log In</a></li> %>
+        <%# </ul> %>
       </div>
     </div>
 <%= yield %>
