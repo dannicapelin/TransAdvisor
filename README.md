@@ -11,7 +11,7 @@ We're going to get sued for this.
 * Dani
 * [Louis](http://github.com/lpil)
 * [Tim](https://github.com/THJ113)
-* [Xavier](https://github.com/THJ113)
+* [Xavier](https://github.com/RockXavierGB)
 
 ## Licence
 
