@@ -13,6 +13,11 @@ We're going to get sued for this.
 * [Tim](https://github.com/THJ113)
 * [Xavier](https://github.com/RockXavierGB)
 
+## Notes
+
+The ONS has postcode and geolocate for free.
+[threedaymonk/uk_postcode](https://github.com/threedaymonk/uk_postcode)
+
 ## Licence
 
 ```
