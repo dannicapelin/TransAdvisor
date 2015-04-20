@@ -8,7 +8,7 @@ We're going to get sued for this.
 
 * [Alex](http://github.com/apocalexnow)
 * [Caroline](https://github.com/carolineclark)
-* Dani
+* [Danni](https://github.com/dannicapelin)
 * [Louis](http://github.com/lpil)
 * [Tim](https://github.com/THJ113)
 * [Xavier](https://github.com/RockXavierGB)
